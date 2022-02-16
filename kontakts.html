@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/kontakts.css">
 </head>
 <body>
     <header class="header">
         <nav class="navbar navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="./index.html">
+                <a class="navbar-brand  custom__font-brand" href="./index.html">
                 Danila's shop
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,36 +38,42 @@
     </header>
     <section class="kontakt">
         <div class="container">
-            <div class="kontakt__inner">
-                <p><i class="fab fa-instagram"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-twitter"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-facebook-f"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-vk"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-whatsapp"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-viber"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-skype"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-pinterest"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-discord"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-telegram-plane"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-tiktok"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-steam-symbol"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-teamspeak"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-weixin"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-linkedin-in"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-snapchat-ghost"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-reddit-alien"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fas fa-at"></i>@guitareegor_old_man_pony</p>
-                <p><i class="far fa-envelope"></i>@guitareegor_old_man_pony</p>
-                <p><i class="fab fa-github"></i>@buddy362</p>
-                </div>
+			<div class="kontakt__title  custom__font-brand">
+				<h2>Наши магазины</h2>
+			</div>
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'Karaganda')" id="defaultOpen">Караганда</button>
+				<button class="tablinks" onclick="openCity(event, 'Nur-Sutan')">Нур-Султан</button>
+				<button class="tablinks" onclick="openCity(event, 'Almaty')">Алматы</button>
+			  </div>
+			  
+			  <!-- Tab content -->
+			  <div id="Karaganda" class="tabcontent">
+				<h3>Наш магазин в Караганде</h3>
+				<p><i class="fa-solid fa-location-dot"></i>просп. Нуркена Абдирова 25</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1622.1367006479904!2d73.10284052167262!3d49.805225710374785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42434718eec0cef7%3A0x85ebdc05f83433e9!2z0JzQsNCz0LDQt9C40L0g0LzRg9C30YvQutCw0LvRjNC90YvRhSDQuNC90YHRgtGA0YPQvNC10L3RgtC-0LIgWWFtYWhh!5e0!3m2!1sru!2skz!4v1644949878063!5m2!1sru!2skz" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			  </div>
+			  
+			  <div id="Nur-Sutan" class="tabcontent">
+				<h3>Наш магазин в Нур-Султане</h3>
+				<p><i class="fa-solid fa-location-dot"></i>просп. Бауыржана Момышулы 23</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d625.816677538161!2d71.478051382209!3d51.14043261995581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42458138a01e24d5%3A0xcdc2283925e48d4d!2zWUFNQUhBIC0g0K_QvNGD0LfRi9C60LA!5e0!3m2!1sru!2skz!4v1644950317519!5m2!1sru!2skz" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			  </div>
+			  
+			  <div id="Almaty" class="tabcontent">
+				<h3>Наш магазин в Алматы</h3>
+				<p><i class="fa-solid fa-location-dot"></i>улица Шевченко 76</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d484.9277723422302!2d76.94090801442698!3d43.24550434639674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836ec2087c6d43%3A0x50ac7235c196d059!2z0JzQsNCz0LDQt9C40L0g0LzRg9C30YvQutCw0LvRjNC90YvRhSDQuNC90YHRgtGA0YPQvNC10L3RgtC-0LIgIllNdXNpYyAtINCv0LzRg9C30YvQutCwIg!5e0!3m2!1sru!2skz!4v1644951110425!5m2!1sru!2skz" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			  </div>
         </div>
-
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="js/main.min.js"></script>
-    <script src="https://kit.fontawesome.com/da42d94a58.js" crossorigin="anonymous"></script>
+	<script src="js/tabs.js"></script>
+    <script src="https://kit.fontawesome.com/fd0b0970b0.js" crossorigin="anonymous"></script>
 </body>
 
 

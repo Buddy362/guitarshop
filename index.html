@@ -5,15 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/signup.css">
+	<link rel="stylesheet" href="css/modalImg.css">
 </head>
 <body>
+
+	<!-- key down on Escape (event) -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form class="custom__signup-form">
+					<div>
+					  <h1>Sign Up</h1>
+					  <p>Please fill in this form to create an account.</p>
+					  <hr class="hr__signup-modal">
+				  
+					  <label for="email"><b>Email</b></label>
+					  <input class="input__form-modal__signup" type="text" placeholder="Enter Email" name="email" required>
+				  
+					  <label for="psw"><b>Password</b></label>
+					  <input class="input__form-modal__signup" type="password" placeholder="Enter Password" name="psw" required>
+				  
+					  <label for="psw-repeat"><b>Repeat Password</b></label>
+					  <input class="input__form-modal__signup" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+				  
+					  <label>
+						<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+					  </label>
+				  
+					  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+				  
+					  <div class="clearfix">
+						<button type="button" class="cancelbtn__custom-signup  button__custom-signup__modal">Cancel</button>
+						<button type="submit" class="signupbtn__custom-signup  button__custom-signup__modal">Sign Up</button>
+					  </div>
+					</div>
+				</form> 
+			</div>
+		  </div>
+		</div>
+	</div>
 
     <header class="header">
         <nav class="navbar navbar-light bg-light">
             <div class="container">
-              <a class="navbar-brand" href="./index.html">
+              <a class="navbar-brand  custom__font-brand" href="./index.html">
                 Danila's shop
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,67 +117,107 @@
             </div>
             <div class="goods__inner">
                 <div class="card" style="width: 18rem;">
-                    <img src="images/cards/1.jpg" class="card-img-top" alt="...">
+                    <img class="card-img-top  modal-target__img" src="images/cards/1.jpg" alt="Harley Benton Epiphone Les Fender">
+					<div id="modal__img" class="modal__img">
+						<span id="modal-close__img" class="modal-close__img">&times;</span>
+						<img id="modal-content__img" class="modal-content__img">
+						<div id="modal-caption__img" class="modal-caption__img"></div>
+					</div>
                     <div class="card-body">
                       <h5 class="card-title">Harley Benton Epiphone Les Fender</h5>
                       <p class="card-text">Press Blue button for more info</p>
-                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/cards/2.jpg" class="card-img-top" alt="...">
+                    <img class="card-img-top  modal-target__img" src="images/cards/2.jpg" alt="ESP CUSTIM DESIGN BY Fender">
+					<div id="modal__img" class="modal__img">
+						<span id="modal-close__img" class="modal-close__img">&times;</span>
+						<img id="modal-content__img" class="modal-content__img">
+						<div id="modal-caption__img" class="modal-caption__img"></div>
+					</div>
                     <div class="card-body">
                       <h5 class="card-title">ESP CUSTIM DESIGN BY Fender</h5>
                       <p class="card-text">Press Blue button for more info</p>
-                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/cards/3.jpg" class="card-img-top" alt="...">
+                    <img class="card-img-top  modal-target__img" src="images/cards/3.jpg" alt="PRS LIMITED EDITION STRATOCASTER CUSTOM">
+					<div id="modal__img" class="modal__img">
+						<span id="modal-close__img" class="modal-close__img">&times;</span>
+						<img id="modal-content__img" class="modal-content__img">
+						<div id="modal-caption__img" class="modal-caption__img"></div>
+					</div>
                     <div class="card-body">
                       <h5 class="card-title">PRS LIMITED EDITION STRATOCASTER CUSTOM</h5>
                       <p class="card-text">Press Blue button for more info</p>
-                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/cards/4.jpg" class="card-img-top" alt="...">
+                    <img class="card-img-top  modal-target__img" src="images/cards/4.jpg" alt="YAMAHA LTD TELECASTER CUSTOM 24">
+					<div id="modal__img" class="modal__img">
+						<span id="modal-close__img" class="modal-close__img">&times;</span>
+						<img id="modal-content__img" class="modal-content__img">
+						<div id="modal-caption__img" class="modal-caption__img"></div>
+					</div>
                     <div class="card-body">
                       <h5 class="card-title">YAMAHA LTD TELECASTER CUSTOM 24</h5>
                       <p class="card-text">Press Blue button for more info</p>
-                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/cards/1.jpg" class="card-img-top" alt="...">
+                    <img class="card-img-top  modal-target__img" src="images/cards/1.jpg" alt="Godin 2 O">
+					<div id="modal__img" class="modal__img">
+						<span id="modal-close__img" class="modal-close__img">&times;</span>
+						<img id="modal-content__img" class="modal-content__img">
+						<div id="modal-caption__img" class="modal-caption__img"></div>
+					</div>
                     <div class="card-body">
                       <h5 class="card-title">Godin 2 O </h5>
                       <p class="card-text">Press Blue button for more info</p>
-                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/cards/2.jpg" class="card-img-top" alt="...">
+                    <img class="card-img-top  modal-target__img" src="images/cards/2.jpg" alt="Chapman custom Mustang">
+					<div id="modal__img" class="modal__img">
+						<span id="modal-close__img" class="modal-close__img">&times;</span>
+						<img id="modal-content__img" class="modal-content__img">
+						<div id="modal-caption__img" class="modal-caption__img"></div>
+					</div>
                     <div class="card-body">
                       <h5 class="card-title">Chapman custom Mustang</h5>
                       <p class="card-text">Press Blue button for more info</p>
-                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/cards/3.jpg" class="card-img-top" alt="...">
+                    <img class="card-img-top  modal-target__img" src="images/cards/3.jpg" alt="Mayonese designed by EEgor Fender">
+					<div id="modal__img" class="modal__img">
+						<span id="modal-close__img" class="modal-close__img">&times;</span>
+						<img id="modal-content__img" class="modal-content__img">
+						<div id="modal-caption__img" class="modal-caption__img"></div>
+					</div>
                     <div class="card-body">
                       <h5 class="card-title">Mayonese designed by EEgor Fender</h5>
                       <p class="card-text">Press Blue button for more info</p>
-                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="images/cards/4.jpg" class="card-img-top" alt="...">
+                    <img class="card-img-top  modal-target__img" src="images/cards/4.jpg" alt="Ibanez JRZKPN10556220412700K">
+					<div id="modal__img" class="modal__img">
+						<span id="modal-close__img" class="modal-close__img">&times;</span>
+						<img id="modal-content__img" class="modal-content__img">
+						<div id="modal-caption__img" class="modal-caption__img"></div>
+					</div>
                     <div class="card-body">
                       <h5 class="card-title">Ibanez JRZKPN10556220412700K</h5>
                       <p class="card-text">Press Blue button for more info</p>
-                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
             </div>
@@ -146,6 +233,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="js/main.min.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/main.min.js"></script>
 </body>
 </html>
