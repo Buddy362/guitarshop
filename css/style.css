@@ -122,3 +122,33 @@
 .carousel-indicators {
 	z-index: 1 !important;
 }
+/* Re-create burger */
+.navbar-toggler{
+	display: none;
+}
+.navbar__nav {
+	display: flex;
+	margin: 0;
+}
+.nav__item {
+	list-style: none;
+	padding-right: 10px;
+}
+.nav__item:last-child {
+	padding-right: 0;
+}
+.nav__link {
+	text-decoration: none;
+	color: #000;
+}
+@media (max-width: 768px) {
+	.navbar__nav {
+		margin-bottom: 16px;
+	}
+	.navbar__wrapper {
+		display: none;
+	}
+	.navbar-toggler {
+		display: block;
+	}
+}

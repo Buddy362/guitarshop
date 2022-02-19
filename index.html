@@ -9,7 +9,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/signup.css">
 	<link rel="stylesheet" href="css/modalImg.css">
@@ -60,10 +61,28 @@
     <header class="header">
         <nav class="navbar navbar-light bg-light">
             <div class="container">
-              <a class="navbar-brand  custom__font-brand" href="./index.html">
-                Danila's shop
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+			  <div data-aos="fade-right" data-aos-duration="3000">
+				  <a class="navbar-brand  custom__font-brand" href="./index.html">
+                	Danila's shop
+              	  </a>
+			  </div>
+              
+			  <div data-aos="fade-left" data-aos-duration="3000" class="navbar__wrapper">
+                <ul class="navbar__nav">
+                  <li class="nav__item">
+                    <a class="nav__link" href="#goods">Товары</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="./kontakts.html">Контакты</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="./about.html">О нас</a>
+                  </li>
+                </ul>
+              </div>
+
+              <button data-aos="fade-left" data-aos-duration="3000" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
@@ -112,12 +131,12 @@
     </section>
     <section class="goods" id="goods">
         <div class="container">
-            <div class="goods__title">
+            <div data-aos="fade-right" data-aos-duration="2000" class="goods__title">
                 <h2>Все Товары</h2>
             </div>
             <div class="goods__inner">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top  modal-target__img" src="images/cards/1.jpg" alt="Harley Benton Epiphone Les Fender">
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="card-img-top  modal-target__img" src="images/cards/1.jpg" alt="Harley Benton Epiphone Les Fender">
 					<div id="modal__img" class="modal__img">
 						<span id="modal-close__img" class="modal-close__img">&times;</span>
 						<img id="modal-content__img" class="modal-content__img">
@@ -130,7 +149,7 @@
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top  modal-target__img" src="images/cards/2.jpg" alt="ESP CUSTIM DESIGN BY Fender">
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="card-img-top  modal-target__img" src="images/cards/2.jpg" alt="ESP CUSTIM DESIGN BY Fender">
 					<div id="modal__img" class="modal__img">
 						<span id="modal-close__img" class="modal-close__img">&times;</span>
 						<img id="modal-content__img" class="modal-content__img">
@@ -143,7 +162,7 @@
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top  modal-target__img" src="images/cards/3.jpg" alt="PRS LIMITED EDITION STRATOCASTER CUSTOM">
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="card-img-top  modal-target__img" src="images/cards/3.jpg" alt="PRS LIMITED EDITION STRATOCASTER CUSTOM">
 					<div id="modal__img" class="modal__img">
 						<span id="modal-close__img" class="modal-close__img">&times;</span>
 						<img id="modal-content__img" class="modal-content__img">
@@ -156,7 +175,7 @@
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top  modal-target__img" src="images/cards/4.jpg" alt="YAMAHA LTD TELECASTER CUSTOM 24">
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="card-img-top  modal-target__img" src="images/cards/4.jpg" alt="YAMAHA LTD TELECASTER CUSTOM 24">
 					<div id="modal__img" class="modal__img">
 						<span id="modal-close__img" class="modal-close__img">&times;</span>
 						<img id="modal-content__img" class="modal-content__img">
@@ -169,7 +188,7 @@
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top  modal-target__img" src="images/cards/1.jpg" alt="Godin 2 O">
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="card-img-top  modal-target__img" src="images/cards/1.jpg" alt="Godin 2 O">
 					<div id="modal__img" class="modal__img">
 						<span id="modal-close__img" class="modal-close__img">&times;</span>
 						<img id="modal-content__img" class="modal-content__img">
@@ -182,7 +201,7 @@
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top  modal-target__img" src="images/cards/2.jpg" alt="Chapman custom Mustang">
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="card-img-top  modal-target__img" src="images/cards/2.jpg" alt="Chapman custom Mustang">
 					<div id="modal__img" class="modal__img">
 						<span id="modal-close__img" class="modal-close__img">&times;</span>
 						<img id="modal-content__img" class="modal-content__img">
@@ -195,7 +214,7 @@
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top  modal-target__img" src="images/cards/3.jpg" alt="Mayonese designed by EEgor Fender">
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="card-img-top  modal-target__img" src="images/cards/3.jpg" alt="Mayonese designed by EEgor Fender">
 					<div id="modal__img" class="modal__img">
 						<span id="modal-close__img" class="modal-close__img">&times;</span>
 						<img id="modal-content__img" class="modal-content__img">
@@ -208,7 +227,7 @@
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top  modal-target__img" src="images/cards/4.jpg" alt="Ibanez JRZKPN10556220412700K">
+                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="card-img-top  modal-target__img" src="images/cards/4.jpg" alt="Ibanez JRZKPN10556220412700K">
 					<div id="modal__img" class="modal__img">
 						<span id="modal-close__img" class="modal-close__img">&times;</span>
 						<img id="modal-content__img" class="modal-content__img">
@@ -231,9 +250,14 @@
       </div>
     </footer>
 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+	<script src="js/mouseover.js"></script>
 	<script src="js/modal.js"></script>
 	<script src="js/main.min.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>
